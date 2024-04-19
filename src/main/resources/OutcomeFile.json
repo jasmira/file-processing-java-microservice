@@ -8,5 +8,10 @@
     "Name": "Mike Smith",
     "Transport": "Drives an SUV",
     "Top Speed": 95.5
+  },
+  {
+    "Name": "Jenny Walters",
+    "Transport": "Rides A Scooter",
+    "Top Speed": 15.3
   }
 ]
