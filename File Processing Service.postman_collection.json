@@ -1,0 +1,606 @@
+{
+	"info": {
+		"_postman_id": "674e059d-80af-4fd5-bd4f-33f0f18f681c",
+		"name": "File Processing Service",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "8177652"
+	},
+	"item": [
+		{
+			"name": "POST Calls",
+			"item": [
+				{
+					"name": "Process File with skipValidation=true and Correct Input File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/jasmi/Desktop/EntryFile.txt"
+								},
+								{
+									"key": "ipAddress",
+									"value": "103.24.49.0",
+									"type": "text"
+								},
+								{
+									"key": "skipValidation",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/process-file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"process-file"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Process File with skipValidation=false and Correct Input File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/jasmi/Desktop/EntryFile.txt"
+								},
+								{
+									"key": "ipAddress",
+									"value": "103.24.49.0",
+									"type": "text"
+								},
+								{
+									"key": "skipValidation",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/process-file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"process-file"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Process File with skipValidation=false and Empty Input File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/jasmi/Desktop/EmptyFile.txt"
+								},
+								{
+									"key": "ipAddress",
+									"value": "103.24.49.0",
+									"type": "text"
+								},
+								{
+									"key": "skipValidation",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/process-file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"process-file"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Process File with skipValidation=true and Empty Input File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/jasmi/Desktop/EmptyFile.txt"
+								},
+								{
+									"key": "ipAddress",
+									"value": "103.24.49.0",
+									"type": "text"
+								},
+								{
+									"key": "skipValidation",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/process-file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"process-file"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Process File with skipValidation=false, Correct Input File, Blocked country IP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/jasmi/Desktop/EntryFile.txt"
+								},
+								{
+									"key": "ipAddress",
+									"value": "8.8.8.8",
+									"type": "text"
+								},
+								{
+									"key": "skipValidation",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/process-file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"process-file"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Process File with skipValidation=false, Correct Input File, Blocked ISP IP",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/jasmi/Desktop/EntryFile.txt"
+								},
+								{
+									"key": "ipAddress",
+									"value": "52.66.193.64",
+									"type": "text"
+								},
+								{
+									"key": "skipValidation",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/process-file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"process-file"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Process File with invalid IP, skipValidation=true, Correct Input File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/jasmi/Desktop/EntryFile.txt"
+								},
+								{
+									"key": "ipAddress",
+									"value": "127.0.0.1",
+									"type": "text"
+								},
+								{
+									"key": "skipValidation",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/process-file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"process-file"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Process File with invalid IP, skipValidation=false, Correct Input File",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "/C:/Users/jasmi/Desktop/EntryFile.txt"
+								},
+								{
+									"key": "ipAddress",
+									"value": "127.0.0.1",
+									"type": "text"
+								},
+								{
+									"key": "skipValidation",
+									"value": "false",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/process-file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"process-file"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET Calls for Validate-IP-With-Details",
+			"item": [
+				{
+					"name": "Validate IP Details with Valid IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/validate-ip/details?ipAddress=103.24.49.0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"validate-ip",
+								"details"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "103.24.49.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate IP Details with Invalid IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/validate-ip/details?ipAddress=127.0.0.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"validate-ip",
+								"details"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "127.0.0.1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate IP Details with Blocked Country IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/validate-ip/details?ipAddress=8.8.8.8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"validate-ip",
+								"details"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "8.8.8.8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate IP Details with Blocked ISP IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/validate-ip/details?ipAddress=34.152.86.0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"validate-ip",
+								"details"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "34.152.86.0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GET calls for Validate-IP",
+			"item": [
+				{
+					"name": "Validate IP with Valid IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/validate-ip?ipAddress=103.24.49.0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"validate-ip"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "103.24.49.0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate IP with Invalid IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/validate-ip?ipAddress=127.0.0.1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"validate-ip"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "127.0.0.1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate IP with Blocked Country IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/validate-ip?ipAddress=8.8.8.8",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"validate-ip"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "8.8.8.8"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validate IP with Blocked ISP IP",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/validate-ip?ipAddress=34.152.86.0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"validate-ip"
+							],
+							"query": [
+								{
+									"key": "ipAddress",
+									"value": "34.152.86.0"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
