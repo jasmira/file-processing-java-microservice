@@ -122,5 +122,43 @@ IP address is whitelisted.
 
 **NOTE: I have used Wiremock to mock the external API: http://ip-api.com/json/{query} in the `IPValidatorServiceTest.java` file.**
 
-Happy Testing!!! :) 
+**NOTE: To test the POST API in POSTMAN client, you have to upload the "EntryFile.txt" as one of the parameter. Refer below steps on how we actually do it:**
+1. In the request body section, make sure you have selected form-data.
+2. In the key-value pairs, for Key: file, Value: Select File from the dropdown, then choose the "EntryFile.txt" from your local file system.
 
+
+#### Some Example IP addresses you can use for testing:
+* IP addresses from the USA: 
+  * 8.8.8.8
+  * 50.207.42.33
+* IP addresses from Spain: 
+  * 81.35.0.0
+  * 88.3.0.0
+* IP addresses from China: 
+  * 1.80.0.0
+  * 14.0.0.0
+
+* For ISPs:
+  * England and Azure: 51.104.9.100
+  * India and AWS: 52.66.193.64
+  * South Africa and GCP: 34.152.86.0
+
+* IP addresses from India:
+  * 103.24.49.0
+  * 103.24.50.0
+  * 103.24.51.0
+  * 103.24.52.0
+  * 103.24.53.0
+
+* IP addresses from Switzerland:
+  * 185.156.73.0
+  * 185.199.94.0
+  * 185.206.224.0
+  * 185.230.144.0
+  * 193.34.217.0
+
+* Invalid IP address: 
+  * 127.0.0.1
+
+
+Happy Testing!!! :) 
